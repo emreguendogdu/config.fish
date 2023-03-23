@@ -8,8 +8,6 @@ end
 
 alias conf='nano ~/.config/fish/config.fish'
 alias sconf='source ~/.config/fish/config.fish'
-alias work='alarm 50'
-alias mola='alarm 10'
 alias findname="xprop | grep WM_CLASS"
 alias clock='tty-clock -sxc -t -C 7'
 alias gputemp="watch -n 2 nvidia-smi"
@@ -45,7 +43,10 @@ function alarm
            timer "$argv[1]"m
            notify-send Timer ended! -i alarm -t 3000
            ffplay -nodisp -autoexit -loglevel quiet -af "volume=0.12" \
-               /home/wyarn/Desktop/soundss/beeps.ogg
+               /home/wyarn/Desktop/sounds/beeps.ogg
        end
+
+alias work='alarm 50'
+alias mola='alarm 10'
 
 starship init fish | source

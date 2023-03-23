@@ -1,0 +1,78 @@
+[line_break]
+disabled = false
+#ffc107 Mustard Yellow
+#bf1143 Gta Red
+#9dc183 Sage Green
+#ffc9d3 Light Pink
+#b5e6d4 Mint Green (for dir)
+[username]
+style_user = "#ffc9d3 bold"
+style_root = "#bf1143 bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '(bold blue)at [$hostname](#bf9f11 bold) '
+trim_at = "."
+disabled = true
+
+[character]
+success_symbol = "[>](#b5e6d4)"
+error_symbol = "[>](#b5e6d4)"
+#  
+# "➜"
+[time]
+disabled = true
+
+[directory]
+format = 'in [$path]($style)[$read_only]($read_only_style) '
+read_only = " "
+truncation_length = 10
+style = "#b5e6d4 bold"
+
+[cmd_duration]
+min_time = 15_000
+show_milliseconds = false
+disabled = true
+style = "bold italic yellow"
+
+[docker_context]
+symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+detect_folders = []
+disabled = false
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+#pyenv_version_name = true
+format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
+style = "bold yellow"
+pyenv_prefix = "venv "
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+detect_extensions = ["py"]
+version_format = "v${raw}"
+
+palette = 'wyarn'
+
+[palettes.wyarn]
+gtared = '#bf1143'

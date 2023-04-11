@@ -4,7 +4,7 @@ from pytube import YouTube
 import sys
 import subprocess
 
-path = "/home/wyarn/Videos/"  # Save path for the .mov file.
+path = "/home/wyarn/Videos/"  # Saving path for the .mov file.
 
 
 if len(sys.argv) < 4:  # If arguments not given, print the instructions.
